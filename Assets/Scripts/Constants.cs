@@ -11,4 +11,11 @@ public class Constants : MonoBehaviour
         ShortCircuit,
         RCD
     }
+
+    public enum MeasureState
+    {
+        Success,
+        Failure,
+        MissingPrecondition
+    }
 }

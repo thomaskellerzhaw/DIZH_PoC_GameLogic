@@ -977,7 +977,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e03498b2b959c14d900dada1451cd07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  measureMode: 3
+  helpSystem: {fileID: 1448976295}
+  measureMode: 0
 --- !u!114 &1040237803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1102,6 +1103,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1448976294}
+  - component: {fileID: 1448976295}
+  - component: {fileID: 1448976296}
   m_Layer: 0
   m_Name: HelpSystem
   m_TagString: Untagged
@@ -1123,6 +1126,45 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1448976295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1448976293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cda6d2568a34841498e0a94261b51a0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1448976296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1448976293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eba2142a97fae9c44a188c053dfd32b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeoutInSeconds: 5
+  onTimeout:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1448976295}
+        m_MethodName: Help
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1483085154
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,6 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof(RCD_Test))]
 public class MeasurementManager : MonoBehaviour
 {
+    [SerializeField] HelpSystem helpSystem;
     public Constants.MeasureMode measureMode;
     private Constants.MeasureMode measureModePrevious;
     private Timer timer;

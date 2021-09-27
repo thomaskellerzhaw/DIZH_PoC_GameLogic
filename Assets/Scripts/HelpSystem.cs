@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class HelpSystem : MonoBehaviour
 {
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +15,15 @@ public class HelpSystem : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void ReportIssue(List<Issue> issues)
+    {
+        //do someting meaningfull with it
+    }
+
+    public void Help()
+    {
+        //do something meaningfull depending on the state of the helpsystem
     }
 }
