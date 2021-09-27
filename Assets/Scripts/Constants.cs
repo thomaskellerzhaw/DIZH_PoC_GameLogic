@@ -6,6 +6,7 @@ public class Constants : MonoBehaviour
 {
     public enum MeasureMode
     {
+        Off,
         Isolation,
         ShortCircuit,
         RCD

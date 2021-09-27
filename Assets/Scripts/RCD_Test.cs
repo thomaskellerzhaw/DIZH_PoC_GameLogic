@@ -17,44 +17,41 @@ public class RCD_Test : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        mM = GetComponent<MeasurementManager>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        //check for measurement mode. If a measurement consists of several steps that may be implemented with a switch statement
-        if(mM.measureMode == Constants.MeasureMode.RCD)
+
+    }
+
+    public void Measure()
+    {
+        //check if preconditions are fulfilled for measurement
+        if (!fuse1PH.getState())
         {
-            //check if preconditions are fulfilled for measurement
-            if(!fuse1PH.getState())
+            if (measuringTip.getConnectedObject().GetComponent<RCD>() != null)
             {
-                if(measuringTip.getConnectedObject().GetComponent<RCD>() != null)
+                //now all the preconditions are fulfilled - make measurement
+                bool result = rCD.trip(tripCurrent);
+                if (result == resultingState)
                 {
-                    //now all the preconditions are fulfilled - make measurement
-                    bool result = rCD.trip(tripCurrent);
-                    if(result == resultingState)
-                    {
-                        Debug.Log("congratulations. you just successfully made a RCD test.");
-                    }
-                    else
-                    {
-                        Debug.Log("oops... try again");
-                    }
+                    Debug.Log("congratulations. you just successfully made a RCD test.");
                 }
                 else
                 {
-                    Debug.Log("Measuring Tip is connected to wrong appliance.");
+                    Debug.Log("oops... try again");
                 }
             }
             else
             {
-                Debug.Log("Fuse1PH must be off before RCD Measurement.");
+                Debug.Log("Measuring Tip is connected to wrong appliance.");
             }
         }
         else
         {
-            //Debug.Log("not in Measurement Mode RCD");
+            Debug.Log("Fuse1PH must be off before RCD Measurement.");
         }
     }
 }

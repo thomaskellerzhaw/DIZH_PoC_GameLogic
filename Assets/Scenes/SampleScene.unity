@@ -865,6 +865,7 @@ GameObject:
   - component: {fileID: 1040237797}
   - component: {fileID: 1040237801}
   - component: {fileID: 1040237802}
+  - component: {fileID: 1040237803}
   m_Layer: 0
   m_Name: Fluke
   m_TagString: Untagged
@@ -976,7 +977,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e03498b2b959c14d900dada1451cd07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  measureMode: 0
+  measureMode: 3
+--- !u!114 &1040237803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1040237796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eba2142a97fae9c44a188c053dfd32b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeoutInSeconds: 1
+  onTimeout:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1091941590
 GameObject:
   m_ObjectHideFlags: 0
@@ -1076,6 +1093,36 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &1448976293
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1448976294}
+  m_Layer: 0
+  m_Name: HelpSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1448976294
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1448976293}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.426626, y: -0.11439055, z: -4.43328}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1483085154
 GameObject:
   m_ObjectHideFlags: 0
